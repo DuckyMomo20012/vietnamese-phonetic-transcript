@@ -246,7 +246,11 @@ const toneMarkList = [
   { character: 'ỵ', originalCharacter: 'y', toneMark: 6 },
 ];
 
-const buildTranscript = (transcript: PhoneticTranscript): string => {
+const transcriptToString = (transcript: PhoneticTranscript): string => {
+  if (!transcript.main || !transcript.toneMark) {
+    throw new Error('Invalid phonetic transcript');
+  }
+
   return (
     (transcript.initial?.replaceAll('-', '') || '') +
     (transcript?.medial?.replaceAll('-', '') || '') +
@@ -256,7 +260,7 @@ const buildTranscript = (transcript: PhoneticTranscript): string => {
   );
 };
 
-const phoneticTranscript = (word: string): string => {
+const buildPhoneticTranscript = (word: string): PhoneticTranscript => {
   word = word.toLowerCase();
 
   let transcript = {
@@ -274,7 +278,10 @@ const phoneticTranscript = (word: string): string => {
 
   // NOTE: Check initial
   initialList.forEach((initial) => {
-    if (word.startsWith(initial.character)) {
+    if (
+      word.startsWith(initial.character) &&
+      word.length - initial.character.length > 0
+    ) {
       transcript.initial = initial.phoneme;
       transcript.initialCharacter = initial.character;
 
@@ -284,7 +291,10 @@ const phoneticTranscript = (word: string): string => {
 
   // NOTE: Check final
   finalList.forEach((final) => {
-    if (word.endsWith(final.character) && word.slice(final.character.length)) {
+    if (
+      word.endsWith(final.character) &&
+      word.length - final.character.length > 0
+    ) {
       transcript.final = final.phoneme;
       transcript.finalCharacter = final.character;
 
@@ -301,13 +311,13 @@ const phoneticTranscript = (word: string): string => {
           word.slice(1),
         ))
     ) {
-      transcript.medial = medialList[0].phoneme;
-      transcript.medialCharacter = medialList[0].character;
+      transcript.medial = medialList[0]!.phoneme;
+      transcript.medialCharacter = medialList[0]!.character;
 
       word = word.slice(1);
     } else if (word.startsWith('o')) {
-      transcript.medial = medialList[1].phoneme;
-      transcript.medialCharacter = medialList[1].character;
+      transcript.medial = medialList[1]!.phoneme;
+      transcript.medialCharacter = medialList[1]!.character;
 
       word = word.slice(1);
     }
@@ -320,8 +330,8 @@ const phoneticTranscript = (word: string): string => {
   ) {
     const main = mainList.filter((main) => main.phoneme === '-ɔ-');
 
-    transcript.main = main[0].phoneme;
-    transcript.mainCharacter = main[0].character;
+    transcript.main = main[0]!.phoneme;
+    transcript.mainCharacter = main[0]!.character;
 
     word = word.slice(1);
   } else {
@@ -336,11 +346,17 @@ const phoneticTranscript = (word: string): string => {
     });
   }
 
-  return buildTranscript(transcript);
+  return transcript;
 };
 
 export const phoneticTranscriptWord = (word: string) => {
-  return word.replaceAll(/[^\P{L}]+/gmu, (word) => phoneticTranscript(word));
+  return word.replaceAll(/[^\P{L}]+/gmu, (word) => {
+    try {
+      return transcriptToString(buildPhoneticTranscript(word));
+    } catch (e) {
+      return word;
+    }
+  });
 };
 
 export const phoneticTranscriptSentence = (sentence: string): string => {
