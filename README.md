@@ -105,34 +105,34 @@ pnpm install
 
 Hệ thống âm đầu: 22 phụ âm
 
-| STT | Âm vị | Chữ viết (+ bối cảnh sử dụng)                 | Ví dụ               |
-| --- | ----- | --------------------------------------------- | ------------------- |
-| 1   | /b-/  | b                                             | bè bạn              |
-| 2   | /m-/  | m                                             | mệt mỏi             |
-| 3   | /f-/  | ph                                            | phờ phạc            |
-| 4   | /v-/  | v                                             | vờ vĩnh             |
-| 5   | /t-/  | t                                             | tí tẹo              |
-| 6   | /tʼ-/ | th                                            | tha thướt           |
-| 7   | /d-/  | đ                                             | đủng đỉnh           |
-| 8   | /n-/  | n                                             | no nê               |
-| 9   | /z-/  | d/gi                                          | giầy da, bánh dầy   |
-| 10  | /ʐ-/  | r                                             | rườm rà             |
-| 11  | /s-/  | x                                             | xa xôi              |
-| 12  | /ʂ-/  | s                                             | san sẻ              |
-| 13  | /c-/  | ch                                            | chim chóc           |
-| 14  | /ʈ-/  | tr                                            | trang trại          |
-| 15  | /ɲ-/  | nh                                            | nhí nhảnh           |
-| 16  | /l-/  | l                                             | lươn lẹo            |
-| 17  | /k-/  | k (+ âm chính: /-i-/, /-e-/, /-ɛ-/, /-ie-/)   | kim, kê, kẻ, kiếm   |
-| 17  | /k-/  | q (+ âm đệm: /-u-/)                          | quả, quýt, quê      |
-| 17  | /k-/  | c (còn lại)                                   | con, cà, cuống      |
-| 18  | /χ-/  | kh                                            | khắt khe            |
-| 19  | /ŋ-/  | ngh (+ âm chính: /-i-/, /-e-/, /-ɛ-/, /-ie-/) | nghĩ, nghèo, nghiền |
-| 19  | /ŋ-/  | ng (còn lại)                                  | ngố, ngáo, ngõ      |
-| 20  | /ɣ-/  | gh (+ âm chính: /-i-/, /-e-/, /-ɛ-/, /-ie-/)  | ghi, ghẻ, ghê       |
-| 20  | /ɣ-/  | g (còn lại)                                   | gà, gỗ, gụ          |
-| 21  | /h-/  | h                                             | hát hò              |
-| 22  | /ʔ-/  | không thể hiện                                | ăn, uống, uể, oải   |
+| STT | Âm vị            | Chữ viết (+ bối cảnh sử dụng)                 | Ví dụ               |
+| --- | ---------------- | --------------------------------------------- | ------------------- |
+| 1   | /b-/             | b                                             | bè bạn              |
+| 2   | /m-/             | m                                             | mệt mỏi             |
+| 3   | /f-/             | ph                                            | phờ phạc            |
+| 4   | /v-/             | v                                             | vờ vĩnh             |
+| 5   | /t-/             | t                                             | tí tẹo              |
+| 6   | /tʼ-/            | th                                            | tha thướt           |
+| 7   | /d-/             | đ                                             | đủng đỉnh           |
+| 8   | /n-/             | n                                             | no nê               |
+| 9   | /z-/             | d/gi                                          | giầy da, bánh dầy   |
+| 10  | /ʐ-/             | r                                             | rườm rà             |
+| 11  | /s-/             | x                                             | xa xôi              |
+| 12  | /ʂ-/             | s                                             | san sẻ              |
+| 13  | /c-/             | ch                                            | chim chóc           |
+| 14  | /ʈ-/             | tr                                            | trang trại          |
+| 15  | /ɲ-/             | nh                                            | nhí nhảnh           |
+| 16  | /l-/             | l                                             | lươn lẹo            |
+| 17  | /k-/             | k (+ âm chính: /-i-/, /-e-/, /-ɛ-/, /-ie-/)   | kim, kê, kẻ, kiếm   |
+| 17  | /k-/             | q (+ âm đệm: /-u-/)                          | quả, quýt, quê      |
+| 17  | /k-/             | c (còn lại)                                   | con, cà, cuống      |
+| 18  | /χ-/             | kh                                            | khắt khe            |
+| 19  | /ŋ-/             | ngh (+ âm chính: /-i-/, /-e-/, /-ɛ-/, /-ie-/) | nghĩ, nghèo, nghiền |
+| 19  | /ŋ-/             | ng (còn lại)                                  | ngố, ngáo, ngõ      |
+| 20  | /ɣ-/             | gh (+ âm chính: /-i-/, /-e-/, /-ɛ-/, /-ie-/)  | ghi, ghẻ, ghê       |
+| 20  | /ɣ-/             | g (còn lại)                                   | gà, gỗ, gụ          |
+| 21  | /h-/             | h                                             | hát hò              |
+| 22  | /ʔ-/ hoặc /zero/ | không thể hiện                                | ăn, uống, uể, oải   |
 
 #### Hệ thống âm đệm
 
@@ -220,61 +220,61 @@ Result:
   \[27 initials\] × \[3 glides\] × \[24 nuclei\] × \[13 codas\] × \[6 tones\]
 
 - Comparisons:
-  Valid vs Dictionary: 92.5%
-  Valid vs Theoretical: 4.89%
-  Dictionary vs Theoretical: 5.28%
+  - Valid vs Dictionary: 92.5%
+  - Valid vs Theoretical: 4.89%
+  - Dictionary vs Theoretical: 5.28%
 
 - Differences:
-  Non-transcribable entries: 597
-  Missing from dictionary: 143,622
+  - Non-transcribable entries: 597
+  - Missing from dictionary: 143,622
 
 ---
 
-Why Only 58% of Dictionary Entries Are Transcribable?
+Why Only 7413 Syllables of Dictionary Entries Are Transcribable?
 
 1. Foreign Words in the Dictionary
 
-- Words like: accordeon, acid, albumin, alpha, ampere, antimon, aspirin, atlas
-- These are borrowed/foreign words that don't follow Vietnamese phonological
-  rules
-- Your transcript system correctly rejects them as non-Vietnamese syllables
+- Words like: accordeon, acid, albumin, alpha, ampere, antimon, aspirin, atlas.
+  These are borrowed/foreign words that don't follow Vietnamese phonological
+  rules.
+- Your transcript system correctly rejects them as non-Vietnamese syllables.
 
 2. Technical/Scientific Terms
 
-- Chemical compounds: aminoacid, ammoniac, amoniac
-- Technical terms: atlat, atmotphe, apatit
-- These often retain foreign pronunciation patterns
+- Chemical compounds: aminoacid, ammoniac, amoniac.
+- Technical terms: atlat, atmotphe, apatit.
+- These often retain foreign pronunciation patterns.
 
 3. Abbreviations & Special Cases
 
-- Shortened forms: al, ag, as
-- Currency codes: afghani, balboa, birr
-- Brand names and proper nouns
+- Shortened forms: al, ag, as.
+- Currency codes: afghani, balboa, birr.
+- Brand names and proper nouns.
 
 Why Only 1.2% of Theoretical Combinations Exist?
 
 1. Phonological Constraints
 
-- Not all consonant-vowel-tone combinations are pronounceable in Vietnamese
-- Vietnamese has strict rules about which sounds can combine
-- Example: Some initial consonants cannot precede certain vowels
+- Not all consonant-vowel-tone combinations are pronounceable in Vietnamese.
+- Vietnamese has strict rules about which sounds can combine.
+- Example: Some initial consonants cannot precede certain vowels.
 
 2. Lexical Gaps
 
-- Even if a combination is pronounceable, it might not form a meaningful word
+- Even if a combination is pronounceable, it might not form a meaningful word.
 - Vietnamese vocabulary has evolved historically, leaving gaps in the sound
-  space
+  space.
 
 3. Tonal Restrictions
 
-- Some vowel-consonant combinations are restricted to certain tones
-- Checked syllables (ending in -p, -t, -c, -ch) can only have tones 1 and 5
+- Some vowel-consonant combinations are restricted to certain tones.
+- Checked syllables (ending in -p, -t, -c, -ch) can only have tones 1 and 5.
 
 4. Historical Language Evolution
 
-- Vietnamese has lost some syllables over time
-- Sound changes have eliminated certain combinations
-- Modern Vietnamese is more constrained than the theoretical maximum
+- Vietnamese has lost some syllables over time.
+- Sound changes have eliminated certain combinations.
+- Modern Vietnamese is more constrained than the theoretical maximum.
 
 <!-- Contributing -->
 
