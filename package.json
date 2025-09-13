@@ -1,11 +1,36 @@
 {
   "name": "vietnamese-phonetic-transcript",
+  "version": "0.0.0",
+  "author": "DuckyMomo20012",
+  "description": "A library for converting Vietnamese text to its phonetic transcription.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuckyMomo20012/vietnamese-phonetic-transcript.git"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
   "scripts": {
+    "lint": "tsc",
+    "build": "tsup",
     "test": "vitest run",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "prepublish": "pnpm run build && pnpm run check-exports && pnpm run lint",
     "prepare": "husky"
   },
-  "packageManager": "pnpm@10.15.1",
   "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.2",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@types/node": "24.3.1",
@@ -23,6 +48,7 @@
     "husky": "9.1.7",
     "lint-staged": "16.1.6",
     "prettier": "3.6.2",
+    "tsup": "8.5.0",
     "typescript": "5.9.2",
     "vitest": "3.2.4"
   }
