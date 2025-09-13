@@ -8,8 +8,8 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["lib/*"]
     }
   },
-  "include": ["./src", "./tests"]
+  "include": ["lib", "./tests"]
 }
