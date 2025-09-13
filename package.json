@@ -1,6 +1,6 @@
 {
   "name": "vietnamese-phonetic-transcript",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "DuckyMomo20012",
   "description": "A library for converting Vietnamese text to its phonetic transcription.",
   "repository": {
