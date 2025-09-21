@@ -200,6 +200,31 @@ Hệ thống âm cuối: 6 phụ âm, 2 bán nguyên âm
 | 8   | /-j/   | i (còn lại)                             | cái, ngoái, cưới, cuối              |
 | 9   | /zero/ | không thể hiện                          | bà, bố, mẹ                          |
 
+### Phonetic Transcription Script
+
+To transcribe Vietnamese text to its phonetic representation, you can use
+function `phoneticTranscriptWord` for individual words or
+`phoneticTranscriptSentence` for entire sentences.
+Here's how to use these functions:
+
+```typescript
+import {
+  phoneticTranscriptWord,
+  phoneticTranscriptSentence,
+} from 'vietnamese-phonetic-transcript';
+// Transcribe a single word
+const word = 'chào';
+const phoneticWord = phoneticTranscriptWord(word);
+console.log(`Phonetic transcription of "${word}": ${phoneticWord}`);
+```
+
+```typescript
+// Transcribe a full sentence
+const sentence = 'Xin chào, bạn có khỏe không?';
+const phoneticSentence = phoneticTranscriptSentence(sentence);
+console.log(`Phonetic transcription of the sentence: ${phoneticSentence}`);
+```
+
 ### Syllable Analysis
 
 This project includes a script to analyze Vietnamese syllables from a text file
@@ -208,7 +233,7 @@ and validate them using phonetic transcription.
 To run the analysis, use the following command:
 
 ```bash
-npx tsx src/syllable_analysis.ts
+npx tsx lib/syllable_analysis.ts
 ```
 
 Result:

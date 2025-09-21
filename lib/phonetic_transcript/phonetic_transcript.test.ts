@@ -2,8 +2,6 @@ import { describe, it, expect } from 'vitest';
 import {
   phoneticTranscriptWord,
   phoneticTranscriptSentence,
-  type PhoneticTranscript,
-  type Constraint,
 } from './phonetic_transcript';
 
 describe('Vietnamese Phonetic Transcript', () => {
